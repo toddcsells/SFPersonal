@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Eating_Out_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Eating_Out__c - Eating_Out_Spent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Eating Out Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Eating_Out_Spent__c</fullName>
+        <externalId>false</externalId>
+        <label>Eating Out Spent</label>
+        <summarizedField>Budget_Tracking__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Actual</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Restaurants</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Budget_Tracking__c.Monthly_Budget__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Eating_Out__c</fullName>
+        <externalId>false</externalId>
+        <label>Eating Out Budget</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gasoline_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Gasoline Budget</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gasoline_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Gasoline_Budget__c - Gasoline_Spent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gasoline Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gasoline_Spent__c</fullName>
+        <externalId>false</externalId>
+        <label>Gasoline Spent</label>
+        <summarizedField>Budget_Tracking__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Actual</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Gasoline</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Budget_Tracking__c.Monthly_Budget__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Grocery_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Grocery Budget</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Grocery_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Grocery_Budget__c - Grocery_Spent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Grocery Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Grocery_Spent__c</fullName>
+        <externalId>false</externalId>
+        <label>Grocery Spent</label>
+        <summarizedField>Budget_Tracking__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Actual</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Supermarkets, Warehouse Clubs</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Budget_Tracking__c.Monthly_Budget__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Miscellaneous_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Miscellaneous Budget</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Miscellaneous_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Miscellaneous_Budget__c -  Miscellaneous_Spent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Miscellaneous Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Miscellaneous_Spent__c</fullName>
+        <externalId>false</externalId>
+        <label>Miscellaneous Spent</label>
+        <summarizedField>Budget_Tracking__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Actual</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Miscellaneous, Merchandise, Home Improvement, Travel/ Entertainment, Government Services</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Budget_Tracking__c.Monthly_Budget__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Services_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Services Budget</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Services_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Services_Budget__c -  Services_Spent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Services Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Services_Spent__c</fullName>
+        <externalId>false</externalId>
+        <label>Services Spent</label>
+        <summarizedField>Budget_Tracking__c.Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Actual</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Budget_Tracking__c.Category__c</field>
+            <operation>equals</operation>
+            <value>Services</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Budget_Tracking__c.Monthly_Budget__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Eating_Out_Remaining__c +  Gasoline_Remaining__c +  Grocery_Remaining__c +  Services_Remaining__c +  Miscellaneous_Remaining__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Monthly Budget</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Monthly Budget Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Monthly Budgets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
